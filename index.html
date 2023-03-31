@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/fav.ico" type="image/x-icon" />
+    <title>Demo Korobka Dmytro</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hello World!</h1>
+      <p>
+        <a href='https://www.linkedin.com/in/dmytro-korobka-196639106/' target='_blanck'>LinkedIn</a> | 
+        <a href='https://github.com/korobkadv' target='_blanck'>GitHub</a>
+    </p>
+    </header>
+    <div class="wrapp">
+      <main></main>
+    </div>
+    <footer></footer>
+    <script type="text/javascript" src="./js/data.js"></script>
+    <script type="text/javascript">
+
+      const searchMain = document.querySelector("main");
+
+      function CreateSection(clas, text, searchBlock) { 
+        const createSection = document.createElement("section");
+        createSection.setAttribute("class", clas);
+        createSection.innerHTML = text;
+        searchBlock.append(createSection);
+      }
+
+      function CreateArticle(obj, searchBlock) { 
+        const createSection = document.createElement("article");
+        createSection.setAttribute("class", 'item');
+        createSection.innerHTML = `
+            <div class='demoImg'>
+                <a href='${obj.url}' target='_blanck'>
+                    <img src='/img/${obj.category}/${obj.img}' alt='${obj.name}' />
+                </a>
+            </div> 
+            <h3>${obj.name}</h3>`;
+        searchBlock.append(createSection);
+      }
+
+      category.map((el, index) => {
+        CreateSection(el.urlNAme, `<h2>${el.name}</h2>`, searchMain);
+        const searchSectionCategory = document.querySelector('.' + el.urlNAme);
+        CreateSection('category ' + el.urlNAme + index, '', searchSectionCategory);
+        const searchSectionForArticle = document.querySelector('.' + el.urlNAme + index);
+        
+
+            demos.filter(obj => {
+                return obj.category === el.urlNAme;
+            }).map(obj => CreateArticle(obj, searchSectionForArticle));
+        
+      });
+
+    </script>
+  </body>
+</html>
