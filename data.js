@@ -13,6 +13,11 @@ const category = [
         name: 'Node JS',
         urlNAme: 'node'
     }
+    ,
+    {
+        name: 'WordPress',
+        urlNAme: 'wordpress'
+    }
 ];
 
 const demos = [
@@ -63,8 +68,20 @@ const demos = [
         name: 'Node.JS Back End',
         url: 'https://github.com/korobkadv/NodeJs-Backend',
         img: 'backend.png'
+    },
+    {
+        category: 'js',
+        name: 'Game moto jump',
+        url: 'http://demo.idvk.info/js/game_moto_jump',
+        img: 'game_moto_jump.png'
+    },
+    {
+        category: 'wordpress',
+        name: 'WorPress WooCommerce store',
+        url: 'http://demo.idvk.info/wp/motostore/',
+        img: 'WP_WooCommerce_Moto_Store.png'
     }
-];
+]; 
 
 
 
