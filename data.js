@@ -80,6 +80,18 @@ const demos = [
         name: 'WorPress WooCommerce store',
         url: 'http://demo.idvk.info/wp/motostore/',
         img: 'WP_WooCommerce_Moto_Store.png'
+    },
+    {
+        category: 'js',
+        name: 'Neo Wake Up message',
+        url: 'http://demo.idvk.info/js/neo/',
+        img: 'neo.png'
+    },
+    {
+        category: 'js',
+        name: 'Car mockup',
+        url: 'http://demo.idvk.info/js/car_mockup/',
+        img: 'car_mockup.png'
     }
 ]; 
 
